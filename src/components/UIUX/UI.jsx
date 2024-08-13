@@ -1,14 +1,12 @@
-import { Chart } from 'chart.js';
-
 export const DashboardHome = () => {
     return (
         <div className="w-full h-screen grid grid-cols-7 font-[Poppins]">
         
             {/* Sidebar colum, 1st colum: consist of smart home button, dashboard button, message button, devices button, settings button */}
             {/* side bar background */}
-            <div className="sidebar flex top-0 bottom-0 h-screen left-0 p-2 text-center bg-[#09006F]  rounded-2xl">
+            <div className="sidebar col-span-1 flex top-0 bottom-0 h-screen left-0 p-2 text-center bg-[#09006F]  rounded-2xl">
 
-                <div className="text-gray-100 text-xl">
+                <div className="relative text-gray-100 text-xl">
                     {/* smart home button */}
                     <div className="p-2.5 mt-6 flex items-center">
                         <h1 className="flex font-bold text-gray-200 text-[15px] ml-3 inline-block">
@@ -61,6 +59,17 @@ export const DashboardHome = () => {
                             <button type="button" className="ml-1">Settings</button>
                         </h1>
                     </div>
+
+                    {/* Log out button */} 
+                    <div className="absolute bottom-2 p-2.5 mt-6 flex items-center">
+                        <h1 className="flex font-bold text-gray-200 text-[15px] ml-3 inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                                <path fill="none" stroke="#e51f1f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                                d="M22.5 4.742a13 13 0 1 1-13 0M16 3v10"/>
+                            </svg>
+                            <button type="button" className="ml-1">Log out</button>
+                        </h1>
+                    </div>
                 </div>
             </div>
 
@@ -95,8 +104,11 @@ export const DashboardHome = () => {
                     <div className='w-full max-auto'>
                         <div className='relative items-center'>
                             <div className='mb-2 flex font-bold'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                                <svg class="h-6 w-6 text-black"  width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" 
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z"/>  
+                                  <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />  
+                                  <line x1="10" y1="9" x2="14" y2="9" />
                                 </svg>
                                 <p className='ml-1'>Temperature</p>  
                             </div>
@@ -257,8 +269,8 @@ export const DashboardHome = () => {
                     </div>
 
                     <div className='relative grid grid-cols-2 font-bold rounded-2xl gap-4'>
-                        <div className='relative mt-2 ml-6'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door open</button>
+                        <div className='relative mt-2 ml-6 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Open door</button>
                             <div className='absolute top-[40%] right-[40%] bg-green-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" 
@@ -270,8 +282,8 @@ export const DashboardHome = () => {
                             className=' w-32 self-start aspect-square rounded object-cover'/>
                         </div>
 
-                        <div className='relative mt-2'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door close</button>
+                        <div className='relative mt-2 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Close door</button>
                             <div className='absolute top-[40%] right-[50%] bg-red-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" 
@@ -279,7 +291,7 @@ export const DashboardHome = () => {
                                 </svg>
 
                             </div>
-                            <img src="src\components\images\close_door.jpeg" alt="close door" 
+                            <img src="src\components\images\close_door.jpeg" alt="turn off" 
                             className='w-32 self-start aspect-square rounded object-cover'/>
                         </div>
                     </div>
@@ -288,15 +300,15 @@ export const DashboardHome = () => {
                 {/*Set living room light */}
                 <div className='relative mt-2 bg-slate-300 rounded-2xl'>
                     <div className='flex font-bold'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                        <svg class="h-6 w-6 text-black"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                         </svg>
                         <p className='ml-2'>Lights</p>
                     </div>
 
                     <div className='relative grid grid-cols-2 font-bold rounded-2xl gap-4'>
-                        <div className='relative mt-2 ml-6'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door open</button>
+                        <div className='relative mt-2 ml-6 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Turn on</button>
                             <div className='absolute top-[40%] right-[40%] bg-green-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" 
@@ -304,12 +316,12 @@ export const DashboardHome = () => {
                                 </svg>
 
                             </div>
-                            <img src="src\components\images\open_door.png" alt="open door" 
+                            <img src="src\components\images\hanging_light.jpg" alt="turn on light" 
                             className=' w-32 self-start aspect-square rounded object-cover'/>
                         </div>
 
-                        <div className='relative mt-2'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door close</button>
+                        <div className='relative mt-2 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Turn off</button>
                             <div className='absolute top-[40%] right-[50%] bg-red-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" 
@@ -317,7 +329,7 @@ export const DashboardHome = () => {
                                 </svg>
 
                             </div>
-                            <img src="src\components\images\close_door.jpeg" alt="close door" 
+                            <img src="src\components\images\wall_lamp.jpg" alt="turn off light" 
                             className='w-32 self-start aspect-square rounded object-cover'/>
                         </div>
                     </div>
@@ -326,15 +338,18 @@ export const DashboardHome = () => {
                 {/*Set living room Air conditioner */}
                 <div className='relative mt-2 bg-slate-300 rounded-2xl'>
                     <div className='flex font-bold'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class='size-6' viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M8 16a3 3 0 0 1-3 3m11-3a3 3 0 0 0 3 3m-7-3v4M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <path d="M7 13v-3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                            </g>
                         </svg>
                         <p className='ml-2'>Air Conditioner</p>
                     </div>
 
                     <div className='relative grid grid-cols-2 font-bold rounded-2xl gap-4'>
-                        <div className='relative mt-2 ml-6'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door open</button>
+                        <div className='relative mt-2 ml-6 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Turn on</button>
                             <div className='absolute top-[40%] right-[40%] bg-green-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" 
@@ -342,12 +357,12 @@ export const DashboardHome = () => {
                                 </svg>
 
                             </div>
-                            <img src="src\components\images\open_door.png" alt="open door" 
+                            <img src="src\components\images\air_conditioner.jpg" alt="turn on air conditioner" 
                             className=' w-32 self-start aspect-square rounded object-cover'/>
                         </div>
 
-                        <div className='relative mt-2'>
-                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Door close</button>
+                        <div className='relative mt-2 mb-2'>
+                            <button type="button" className='absolute ml-8 bottom-0 text-white'>Turn off</button>
                             <div className='absolute top-[40%] right-[50%] bg-red-500 rounded-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" 
@@ -355,7 +370,7 @@ export const DashboardHome = () => {
                                 </svg>
 
                             </div>
-                            <img src="src\components\images\close_door.jpeg" alt="close door" 
+                            <img src="src\components\images\air_conditioner.jpg" alt="turn off air conditioner" 
                             className='w-32 self-start aspect-square rounded object-cover'/>
                         </div>
                     </div>

@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-import './components/UIUX/UI.jsx'
-import { DashboardHome } from './components/UIUX/UI.jsx'
+import './components/UIUX/Home.jsx'
+import { DashboardHome } from './components/UIUX/Home.jsx'
+import { DashboardDevices } from './components/UIUX/Devices.jsx'
 
 export default function App() {
   return (
     <div className="w-full h-screen flex">
-      <DashboardHome />
+      {/* <DashboardHome /> */}
+      <DashboardDevices/>
+      
     </div>
 
   )

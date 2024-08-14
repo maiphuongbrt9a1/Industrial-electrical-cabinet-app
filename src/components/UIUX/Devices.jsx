@@ -137,7 +137,7 @@ export const DashboardDevices = () => {
                                 <h1>10°C ---</h1>
                             </div>
 
-                            <div className="absolute flex font-bold text-xs bottom-[45%] right-[33%]">
+                            <div className="absolute flex font-bold text-xs bottom-[45%] right-[32%]">
                                 <h1>--- 30°C</h1>
                             </div>
                         </div>

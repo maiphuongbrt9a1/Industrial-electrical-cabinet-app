@@ -90,8 +90,59 @@ export const DashboardDevices = () => {
                 </div>
 
                 {/* Air conditioner section */}
-                <div className='relative bg-slate-300 rounded-3xl'>
+                <div className='w-full max-auto mt-4 mb-4'>
+                    <div className='relative bg-slate-300 rounded-3xl'>                        
+                        {/* Title */}
+                        <div className="grid grid-cols-5">
+                            <div className="col-span-4 flex items-center font-bold text-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class='size-8' viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                    <path d="M8 16a3 3 0 0 1-3 3m11-3a3 3 0 0 0 3 3m-7-3v4M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <path d="M7 13v-3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                                    </g>
+                                </svg>
+                                <h1 className="ml-2">Air conditioner</h1>
+                            </div>
 
+                            <div className="colo-span-1 flex items-center justify-center text-xl font-bold">
+                                <button type="button" className="mr-2">On</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="#0ff017" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                        <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        {/* Center temperature circle */}
+                        <div className="relative flex bg-[#f7f1ff] rounded-3xl text-[#09006F]">
+                            <div class="absolute flex w-[10rem] h-[10rem] bg-[#0ff017] rounded-full ml-[39%] "></div>
+                            <div class='absolute flex w-[10rem] h-[5rem] bg-[#f7f1ff] ml-[39%] bottom-0'></div>
+                            <div class="relative flex w-36 h-36 bg-[#ebe9e9] rounded-full shadow-xl ml-[40%] mt-[10px] mb-[10px]">
+                                <div className='absolute bottom-[50%] right-[33.3%] top-[30%]  font-bold text-xl'>
+                                    <div>Goal</div>
+                                    <div>24 °C</div>
+                                </div>
+                            </div>
+
+                            <div className="absolute flex font-bold text-4xl bottom-[40%] left-[20%] w-10 h-10 rounded-2xl bg-[#ebe9e9] justify-center text-center">
+                                <button type='button' className="">-</button>
+                            </div>
+
+                            <div className="absolute flex font-bold text-4xl bottom-[40%] right-[20%] w-10 h-10 rounded-2xl bg-[#ebe9e9] justify-center text-center">
+                                <button type='button'>+</button>
+                            </div>
+
+                            <div className="absolute flex font-bold text-xs bottom-[45%] left-[33%]">
+                                <h1>10°C ---</h1>
+                            </div>
+
+                            <div className="absolute flex font-bold text-xs bottom-[45%] right-[33%]">
+                                <h1>--- 30°C</h1>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 {/* Devices section */}
@@ -158,14 +209,14 @@ export const DashboardDevices = () => {
                     <div className='m-4 mt-0 bg-slate-400 rounded-2xl text-white'>
                         <div className='grid grid-cols-2 m-4'>
                             <div className='justify-center items-center text-left'>
-                                <button type="button">Turn off</button>
+                                <button type="button">Turn on</button>
                             </div> 
                             <div className='justify-center items-center flex'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
-                                <path fill="black" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
-                                    <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
-                                </path>
-                            </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="#0ff017" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                        <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                    </path>
+                                </svg>
                             </div>
                         </div>
                         

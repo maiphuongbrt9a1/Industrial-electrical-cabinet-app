@@ -90,12 +90,130 @@ export const DashboardDevices = () => {
                 </div>
 
                 {/* Air conditioner section */}
-                <div>
+                <div className='relative bg-slate-300 rounded-3xl'>
 
                 </div>
 
                 {/* Devices section */}
-                <div>
+                <div className="relative grid grid-cols-2 grid-row-2 text-xl bg-slate-300 rounded-3xl">
+                    {/* Temperature button */}
+                    <div className='m-4 bg-[#09006F] rounded-2xl text-white'>
+                        <div className='grid grid-cols-2 m-4'>
+                            <div className='justify-center items-center text-left'>
+                                <button type="button">Turn on</button>
+                            </div> 
+                            <div className='justify-center items-center flex'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                    <path fill="#0ff017" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                        <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 m-4">
+                            <div className="justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                                    <path fill="currentColor" 
+                                        d="M20 10h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zm-10-1.816V7H8v13.184a3 3 0 1 0 2 0"/>
+                                    <path fill="currentColor" 
+                                        d="M30 4H12.974A4.983 4.983 0 0 0 4 7v11.11a7 7 0 1 0 10 0V7a5 5 0 0 0-.101-1H30ZM9 28a4.993 4.993 0 0 1-3.332-8.718L6 18.983V7a3 3 0 0 1 6 0v11.983l.332.299A4.993 4.993 0 0 1 9 28"/>
+                                </svg>
+                            </div>
+                            
+                            <div className="justify-center items-center text-center">
+                                <h1 className=''>Temperature</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Lights button */}
+                    <div className='m-4 ml-0 mb bg-slate-400 rounded-2xl text-white'>
+                        <div className='grid grid-cols-2 m-4'>
+                            <div className='justify-center items-center text-left'>
+                                <button type="button">Turn off</button>
+                            </div> 
+                            <div className='justify-center items-center flex'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                <path fill="black" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                    <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                </path>
+                            </svg>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 m-4">
+                            <div className="justify-center items-center">
+                                <svg class="h-8 w-8 currentColor"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <div className="justify-center items-center text-center">
+                                <h1>Light</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Air conditioner button */}
+                    <div className='m-4 mt-0 bg-slate-400 rounded-2xl text-white'>
+                        <div className='grid grid-cols-2 m-4'>
+                            <div className='justify-center items-center text-left'>
+                                <button type="button">Turn off</button>
+                            </div> 
+                            <div className='justify-center items-center flex'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                <path fill="black" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                    <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                </path>
+                            </svg>
+                            </div>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 m-4">
+                            <div className="justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class='size-8' viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                    <path d="M8 16a3 3 0 0 1-3 3m11-3a3 3 0 0 0 3 3m-7-3v4M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <path d="M7 13v-3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            
+                            <div className="justify-center items-center text-center">
+                                <h1>Air conditioner</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Refrigerator button */}
+                    <div className='m-4 mt-0 ml-0 bg-slate-400 rounded-2xl text-white'>
+                        <div className='grid grid-cols-2 m-4'>
+                            <div className='justify-center items-center text-left'>
+                                <button type="button">Turn off</button>
+                            </div> 
+                            <div className='justify-center items-center flex'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24">
+                                <path fill="black" d="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z">
+                                    <animate fill="freeze" attributeName="d" dur="0.2s" values="M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z;M17 7a5 5 0 0 1 0 10H7A5 5 0 1 1 7 7h10Zm-10 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/>
+                                </path>
+                            </svg>
+                            </div>
+                        </div>
+                        
+
+                        <div className="grid grid-cols-2 m-4">
+                            <div className="justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                                    d="M5 6c0-1.886 0-2.828.586-3.414S7.114 2 9 2h6c1.886 0 2.828 0 3.414.586S19 4.114 19 6v14c0 .943 0 1.414-.293 1.707S17.943 22 17 22H7c-.943 0-1.414 0-1.707-.293S5 20.943 5 20zm3 1h.009M8 13h.009M5 10h14" color="currentColor"/>
+                                </svg>
+                            </div>
+
+                            <div className="justify-center items-center text-center">
+                                <h1>Refrigerator</h1>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -116,17 +234,36 @@ export const DashboardDevices = () => {
                 </div>
 
                 {/* Temperature section */}
-                <div>
-                    <h1>Temperature</h1>
-
+                <div className='relative font-bold mt-4'>
+                    <div className="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                            <path fill="currentColor" 
+                                d="M20 10h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zm-10-1.816V7H8v13.184a3 3 0 1 0 2 0"/>
+                            <path fill="currentColor" 
+                                d="M30 4H12.974A4.983 4.983 0 0 0 4 7v11.11a7 7 0 1 0 10 0V7a5 5 0 0 0-.101-1H30ZM9 28a4.993 4.993 0 0 1-3.332-8.718L6 18.983V7a3 3 0 0 1 6 0v11.983l.332.299A4.993 4.993 0 0 1 9 28"/>
+                        </svg>
+                        
+                        <h1 className='text-center text-xl ml-2'>Temperature</h1>
+                    </div>
+                
+                    <h1 className='text-center text-3xl text-blue-700'>32 °C</h1>
                     <img src="src\components\images\daily-temperature-line-chart.png" alt="Temperature chart" 
-                    className=''/>
+                    className='mt-2 mb-2'/>
                 </div>
 
                 {/* Humidity section */}
-                <div>
-                    <h1>Humidity</h1>
-                    <img src="src\components\images\daily-humidity-chart.png" alt="Humidity chart" />
+                <div className="relative font-bold mt-4">
+                    <div className="flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30">
+                            <path fill="currentColor" 
+                            d="M7.56 17.19q0-1.32.72-3.03c.72-1.71 1.1-2.25 1.86-3.31c1.56-2.06 2.92-3.62 4.06-4.67l.75-.72c.25.26.53.5.83.72c.41.42 1.04 1.11 1.88 2.09s1.57 1.85 2.17 2.65c.71 1.01 1.32 2.1 1.81 3.25s.74 2.16.74 3.03c0 1-.19 1.95-.58 2.86s-.91 1.7-1.57 2.36s-1.45 1.19-2.37 1.58s-1.89.59-2.91.59c-1 0-1.95-.19-2.86-.57s-1.7-.89-2.36-1.55c-.66-.65-1.19-1.44-1.58-2.35s-.59-1.89-.59-2.93m2.26-2.93c0 .83.17 1.49.52 1.99c.35.49.88.74 1.59.74c.72 0 1.25-.25 1.61-.74c.35-.49.53-1.15.54-1.99c-.01-.84-.19-1.5-.54-2c-.35-.49-.89-.74-1.61-.74c-.71 0-1.24.25-1.59.74c-.35.5-.52 1.16-.52 2m1.57 0v-.35c0-.08.01-.19.02-.33s.02-.25.05-.32s.05-.16.09-.24s.09-.15.15-.18c.07-.04.14-.06.23-.06q.21 0 .33.12c.12.12.14.21.17.38c.03.18.05.32.06.45s.01.3.01.52c0 .23 0 .4-.01.52q-.015.18-.06.45c-.03.17-.09.3-.17.38s-.19.12-.33.12c-.09 0-.16-.02-.23-.06a.34.34 0 0 1-.15-.18c-.04-.08-.07-.17-.09-.24c-.02-.08-.04-.19-.05-.32c-.01-.14-.02-.25-.02-.32zm.59 7.75h1.32l4.99-10.74h-1.35zm4.3-2.99c.01.84.2 1.5.55 2c.35.49.89.74 1.6.74c.72 0 1.25-.25 1.6-.74s.52-1.16.53-2c-.01-.84-.18-1.5-.53-1.99s-.88-.74-1.6-.74c-.71 0-1.25.25-1.6.74c-.36.49-.54 1.15-.55 1.99m1.57 0c0-.23 0-.4.01-.52q.015-.18.06-.45c.045-.27.09-.3.17-.38s.19-.12.33-.12q.135 0 .24.06c.07.04.12.1.16.19s.07.17.1.24s.04.18.05.32l.01.32v.69l-.01.32l-.05.32l-.1.24l-.16.19l-.24.06q-.21 0-.33-.12c-.12-.12-.14-.21-.17-.38q-.045-.27-.06-.45c-.015-.18-.01-.3-.01-.53"/>
+                        </svg>
+                        <h1 className='text-center text-xl ml-2'>Humidity</h1>
+                    </div>
+                        
+                    <h1 className='text-center text-3xl text-blue-700'>92%</h1>
+                    <img src="src\components\images\daily-humidity-chart.png" alt="Humidity chart" 
+                    className="mt-1 mb-2"/>
                 </div>
             </div>
         </div>
